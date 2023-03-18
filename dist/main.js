@@ -16,7 +16,7 @@
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n___CSS_LOADER_EXPORT___.push([module.id, \"@import url(https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:wght@400;500;700&display=swap);\"]);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body{\\r\\n    margin: 0;\\r\\n    padding: 0;\\r\\n    background-color: rgb(20,20,20);\\r\\n    color: aliceblue;\\r\\n    font-family: Roboto, sans-serif;\\r\\n    font-size: 30px;\\r\\n    font-weight: 700;\\r\\n}\\r\\n\\r\\n.container{\\r\\n    width: 100vw;\\r\\n    height: 100vh;\\r\\n    display: grid;\\r\\n    grid-template: minmax(100px, 0.5fr) 5fr 30px / \\r\\n    minmax(300px, 1fr) 6fr;\\r\\n}\\r\\n\\r\\n/*HEADER*/\\r\\n.header-banner{\\r\\n    grid-area: 1 / 1 / 2 / 3;\\r\\n    font-family: 'Exo 2', sans-serif;\\r\\n    font-size: 42px;\\r\\n    font-weight: 700;\\r\\n\\r\\n    display: flex;\\r\\n    justify-content: space-between;\\r\\n    align-items: center;\\r\\n    padding: 5px 30px 5px 10px;\\r\\n}\\r\\n\\r\\n.header-banner > * {\\r\\n    cursor: pointer;\\r\\n}\\r\\n\\r\\n.header-title{\\r\\n    display: flex;\\r\\n    align-items: center;\\r\\n}\\r\\n\\r\\n.side-banner{\\r\\n    grid-area: 2 / 1 / 3 / 2;\\r\\n    background-color: #0b2630;\\r\\n}\\r\\n\\r\\n.body-banner{\\r\\n    grid-area: 2 / 2 / 3 / 3;\\r\\n    background-color: #10323e;\\r\\n}\\r\\n\\r\\n.footer{\\r\\n    grid-area: 3 / 1 / 4 / 3;\\r\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://to-do-list/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n___CSS_LOADER_EXPORT___.push([module.id, \"@import url(https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:wght@400;500;700&display=swap);\"]);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body{\\n    margin: 0;\\n    padding: 0;\\n    background-color: rgb(20,20,20);\\n    color: aliceblue;\\n    font-family: Roboto, sans-serif;\\n    font-size: 18px;\\n    font-weight: 500;\\n}\\n\\n.container{\\n    width: 100vw;\\n    height: 100vh;\\n    display: grid;\\n    grid-template: minmax(100px, 0.5fr) 5fr 30px / \\n    minmax(300px, 1fr) 6fr;\\n}\\n\\n/*HEADER*/\\n.header-banner{\\n    grid-area: 1 / 1 / 2 / 3;\\n    font-family: 'Exo 2', sans-serif;\\n    font-size: 42px;\\n    font-weight: 700;\\n\\n    display: flex;\\n    justify-content: space-between;\\n    align-items: center;\\n    padding: 5px 30px 5px 10px;\\n}\\n\\n.header-banner > * {\\n    cursor: pointer;\\n}\\n\\n.header-title{\\n    display: flex;\\n    align-items: center;\\n}\\n\\n/*SIDE BANNER*/\\n.side-banner{\\n    grid-area: 2 / 1 / 3 / 2;\\n    background-color: #0b2630;\\n    display: flex;\\n    flex-direction: column;\\n    row-gap: 30px;\\n\\n    padding: 15px;\\n    letter-spacing: 0.5px;\\n}\\n\\n.folder-header{\\n    border-bottom: solid 1px aliceblue;\\n    font-weight: 700;\\n    font-size: 24px;\\n    padding-bottom: 3px;\\n}\\n\\n.folder-content{\\n    display: flex;\\n    flex-direction: column;\\n}\\n\\n.folder-content > *{\\n    cursor: pointer;\\n}\\n\\n.home-item{\\n    display: flex;\\n    column-gap: 10px;\\n    align-items: center;\\n}\\n\\n.home-item:hover{\\n    background-color: #10323e;\\n    filter: opacity(0.9);\\n    border-radius: 10px;\\n}\\n\\n.home-folder{\\n    display: flex;\\n    flex-direction: column;\\n    row-gap: 20px;\\n}\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n.body-banner{\\n    grid-area: 2 / 2 / 3 / 3;\\n    background-color: #10323e;\\n}\\n\\n.footer{\\n    grid-area: 3 / 1 / 4 / 3;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://to-do-list/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -125,7 +125,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \*********************/
 /***/ (() => {
 
-eval("const layout = () => {\r\n    const body = document.createElement('section');\r\n    const container = document.querySelector('.container');\r\n    \r\n    body.innerText = 'body';\r\n    body.className = 'body-banner';\r\n    container.appendChild(body);    \r\n}\r\n\r\nlayout();\n\n//# sourceURL=webpack://to-do-list/./src/body.js?");
+eval("const layout = () => {\n    const body = document.createElement('section');\n    const container = document.querySelector('.container');\n    \n    body.innerText = 'body';\n    body.className = 'body-banner';\n    container.appendChild(body);    \n}\n\nlayout();\n\n//# sourceURL=webpack://to-do-list/./src/body.js?");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ eval("const layout = () => {\r\n    const body = document.createElement('section
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _images_icons_todolist_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/icons-todolist.png */ \"./src/images/icons-todolist.png\");\n/* harmony import */ var _images_icons_menulogo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/icons-menulogo.png */ \"./src/images/icons-menulogo.png\");\n/* harmony import */ var _images_john_pogi_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/john-pogi.png */ \"./src/images/john-pogi.png\");\n\r\n\r\n\r\n\r\nconst layout = () => {\r\n    headerLayout();\r\n    footerLayout();    \r\n}\r\n\r\nconst headerLayout = () => {\r\n    const container = document.querySelector('.container');\r\n    const headerBanner = document.createElement('section');\r\n    const hamburger = document.createElement('div');\r\n    const headerTitle = document.createElement('div');\r\n    const darkMode = document.createElement('div');\r\n    \r\n    headerBanner.className = 'header-banner';\r\n    container.appendChild(headerBanner);\r\n\r\n    hamburger.setAttribute('class','hamburger-logo');\r\n    headerBanner.appendChild(hamburger);\r\n    headerTitle.setAttribute('class','header-title');\r\n    headerBanner.appendChild(headerTitle);\r\n    darkMode.setAttribute('class','dark-mode');\r\n    headerBanner.appendChild(darkMode);\r\n\r\n    const hamburgerIcon = new Image();\r\n    hamburgerIcon.src = _images_icons_menulogo_png__WEBPACK_IMPORTED_MODULE_1__;\r\n    hamburger.appendChild(hamburgerIcon);\r\n    hamburgerIcon.style.width = '30px';\r\n    hamburgerIcon.style.filter = 'brightness(0) invert(1)';\r\n    hamburgerIcon.style.opacity = '0.85';\r\n\r\n    const todoIcon = new Image();\r\n    todoIcon.src = _images_icons_todolist_png__WEBPACK_IMPORTED_MODULE_0__;\r\n    headerTitle.appendChild(todoIcon);\r\n\r\n    const headerTitleText = document.createElement('span');\r\n    headerTitleText.innerText = \"toDoList\";\r\n    headerTitle.appendChild(headerTitleText);\r\n\r\n    const profilePic = new Image();\r\n    profilePic.src = _images_john_pogi_png__WEBPACK_IMPORTED_MODULE_2__;\r\n    darkMode.appendChild(profilePic);\r\n    profilePic.style.width = '60px'\r\n    profilePic.style.borderRadius = '30px';\r\n\r\n}\r\n\r\nconst footerLayout = () => {\r\n    const container = document.querySelector('.container');\r\n    const footer = document.createElement('section');\r\n\r\n    footer.innerText = 'footer';\r\n    footer.className = 'footer'\r\n    container.appendChild(footer);\r\n}\r\n\r\nlayout();\n\n//# sourceURL=webpack://to-do-list/./src/header-banner.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _images_header_banner_icons_todolist_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/header-banner/icons-todolist.png */ \"./src/images/header-banner/icons-todolist.png\");\n/* harmony import */ var _images_header_banner_icons_menulogo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/header-banner/icons-menulogo.png */ \"./src/images/header-banner/icons-menulogo.png\");\n/* harmony import */ var _images_header_banner_john_pogi_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/header-banner/john-pogi.png */ \"./src/images/header-banner/john-pogi.png\");\n\n\n\n\nconst layout = () => {\n    headerLayout();\n    footerLayout();    \n}\n\nconst headerLayout = () => {\n    const container = document.querySelector('.container');\n    const headerBanner = document.createElement('section');\n    const hamburger = document.createElement('div');\n    const headerTitle = document.createElement('div');\n    const darkMode = document.createElement('div');\n    \n    headerBanner.className = 'header-banner';\n    container.appendChild(headerBanner);\n\n    hamburger.setAttribute('class','hamburger-logo');\n    headerBanner.appendChild(hamburger);\n    headerTitle.setAttribute('class','header-title');\n    headerBanner.appendChild(headerTitle);\n    darkMode.setAttribute('class','dark-mode');\n    headerBanner.appendChild(darkMode);\n\n    const hamburgerIcon = new Image();\n    hamburgerIcon.src = _images_header_banner_icons_menulogo_png__WEBPACK_IMPORTED_MODULE_1__;\n    hamburger.appendChild(hamburgerIcon);\n    hamburgerIcon.style.width = '30px';\n    hamburgerIcon.style.filter = 'brightness(0) invert(1)';\n    hamburgerIcon.style.opacity = '0.85';\n\n    const todoIcon = new Image();\n    todoIcon.src = _images_header_banner_icons_todolist_png__WEBPACK_IMPORTED_MODULE_0__;\n    headerTitle.appendChild(todoIcon);\n\n    const headerTitleText = document.createElement('span');\n    headerTitleText.innerText = \"toDoList\";\n    headerTitle.appendChild(headerTitleText);\n\n    const profilePic = new Image();\n    profilePic.src = _images_header_banner_john_pogi_png__WEBPACK_IMPORTED_MODULE_2__;\n    darkMode.appendChild(profilePic);\n    profilePic.style.width = '60px'\n    profilePic.style.borderRadius = '30px';\n}\n\nconst footerLayout = () => {\n    const container = document.querySelector('.container');\n    const footer = document.createElement('section');\n\n    footer.innerText = 'footer';\n    footer.className = 'footer'\n    container.appendChild(footer);\n}\n\nlayout();\n\n//# sourceURL=webpack://to-do-list/./src/header-banner.js?");
 
 /***/ }),
 
@@ -147,7 +147,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ima
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _header_banner_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header-banner.js */ \"./src/header-banner.js\");\n/* harmony import */ var _side_banner_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./side-banner.js */ \"./src/side-banner.js\");\n/* harmony import */ var _side_banner_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_side_banner_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _body_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./body.js */ \"./src/body.js\");\n/* harmony import */ var _body_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_body_js__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _header_banner_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header-banner.js */ \"./src/header-banner.js\");\n/* harmony import */ var _side_banner_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./side-banner.js */ \"./src/side-banner.js\");\n/* harmony import */ var _body_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./body.js */ \"./src/body.js\");\n/* harmony import */ var _body_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_body_js__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
 
 /***/ }),
 
@@ -155,42 +155,98 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /*!****************************!*\
   !*** ./src/side-banner.js ***!
   \****************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("const layout = () => {\r\n    const side = document.createElement('section');\r\n    const container = document.querySelector('.container');\r\n    \r\n    side.innerText = 'side';\r\n    side.className = 'side-banner';\r\n    container.appendChild(side);    \r\n}\r\n\r\nlayout();\n\n//# sourceURL=webpack://to-do-list/./src/side-banner.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _images_side_banner_icons_tasks_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/side-banner/icons-tasks.png */ \"./src/images/side-banner/icons-tasks.png\");\n/* harmony import */ var _images_side_banner_icons_today_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/side-banner/icons-today.png */ \"./src/images/side-banner/icons-today.png\");\n/* harmony import */ var _images_side_banner_icons_7days_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/side-banner/icons-7days.png */ \"./src/images/side-banner/icons-7days.png\");\n/* harmony import */ var _images_side_banner_icons_important_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/side-banner/icons-important.png */ \"./src/images/side-banner/icons-important.png\");\n/* harmony import */ var _images_side_banner_icons_add_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./images/side-banner/icons-add.png */ \"./src/images/side-banner/icons-add.png\");\n\n\n\n\n\n\n\nconst layout = () => {\n    const side = document.createElement('section');\n    const container = document.querySelector('.container');\n    \n    side.className = 'side-banner';\n    container.appendChild(side);\n    \n    const homeFolder = document.createElement('div');\n    const projectFolder = document.createElement('div');\n    homeFolder.setAttribute('class','home-folder');\n    projectFolder.setAttribute('class','project-folder');\n    side.appendChild(homeFolder);\n    side.appendChild(projectFolder);\n\n    //THIS IS THE HOME FOLDER\n    const homeFolderHeader = document.createElement('div');\n    homeFolderHeader.setAttribute('class', 'folder-header')\n    homeFolderHeader.innerText = 'Home'\n    homeFolder.appendChild(homeFolderHeader);\n\n    const homeFolderContent = document.createElement('div');\n    homeFolderContent.setAttribute('class','folder-content')\n    homeFolder.appendChild(homeFolderContent)\n\n    const homeFolderAllTasks = document.createElement('div');\n    const homeFolderToday = document.createElement('div');\n    const homeFolderSevenDays = document.createElement('div');\n    const homeFolderImportant = document.createElement('div');\n\n    homeFolderAllTasks.setAttribute('class','home-item')\n    homeFolderToday.setAttribute('class','home-item')\n    homeFolderSevenDays.setAttribute('class','home-item')\n    homeFolderImportant.setAttribute('class','home-item')\n\n    homeFolderContent.appendChild(homeFolderAllTasks);\n    homeFolderContent.appendChild(homeFolderToday);\n    homeFolderContent.appendChild(homeFolderSevenDays);\n    homeFolderContent.appendChild(homeFolderImportant);\n\n    const allTasksImg = new Image();\n    allTasksImg.src = _images_side_banner_icons_tasks_png__WEBPACK_IMPORTED_MODULE_0__;\n    homeFolderAllTasks.appendChild(allTasksImg);\n    allTasksImg.style.width = '50px'\n\n    const allTasksText = document.createElement('span');\n    allTasksText.innerText = 'All Tasks'\n    homeFolderAllTasks.appendChild(allTasksText);\n\n    const todayImg = new Image();\n    todayImg.src = _images_side_banner_icons_today_png__WEBPACK_IMPORTED_MODULE_1__;\n    homeFolderToday.appendChild(todayImg);\n    todayImg.style.width = '50px'\n\n    const todayText = document.createElement('span');\n    todayText.innerText = 'Today'\n    homeFolderToday.appendChild(todayText);\n    \n    const sevenDaysImg = new Image();\n    sevenDaysImg.src = _images_side_banner_icons_7days_png__WEBPACK_IMPORTED_MODULE_2__;\n    homeFolderSevenDays.appendChild(sevenDaysImg);\n    sevenDaysImg.style.width = '50px'\n\n    const sevenDaysText = document.createElement('span');\n    sevenDaysText.innerText = 'Next 7 Days'\n    homeFolderSevenDays.appendChild(sevenDaysText);\n\n    const importantImg = new Image();\n    importantImg.src = _images_side_banner_icons_important_png__WEBPACK_IMPORTED_MODULE_3__;\n    homeFolderImportant.appendChild(importantImg);\n    importantImg.style.width = '50px'\n\n    const importantText = document.createElement('span');\n    importantText.innerText = 'Important'\n    homeFolderImportant.appendChild(importantText);\n    \n    //THIS IS THE PROJECT FOLDER\n    const projFolderHeader = document.createElement('div');\n    projFolderHeader.setAttribute('class', 'folder-header')\n    projFolderHeader.innerText = 'Projects'\n    projectFolder.appendChild(projFolderHeader);\n\n    const projFolderContent = document.createElement('div');\n    projFolderContent.setAttribute('class','folder-content')\n    projectFolder.appendChild(projFolderContent)\n\n}\n\nlayout();\n\n//# sourceURL=webpack://to-do-list/./src/side-banner.js?");
 
 /***/ }),
 
-/***/ "./src/images/icons-menulogo.png":
-/*!***************************************!*\
-  !*** ./src/images/icons-menulogo.png ***!
-  \***************************************/
+/***/ "./src/images/header-banner/icons-menulogo.png":
+/*!*****************************************************!*\
+  !*** ./src/images/header-banner/icons-menulogo.png ***!
+  \*****************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"e0d695bf304e7e3f7769.png\";\n\n//# sourceURL=webpack://to-do-list/./src/images/icons-menulogo.png?");
+eval("module.exports = __webpack_require__.p + \"e0d695bf304e7e3f7769.png\";\n\n//# sourceURL=webpack://to-do-list/./src/images/header-banner/icons-menulogo.png?");
 
 /***/ }),
 
-/***/ "./src/images/icons-todolist.png":
-/*!***************************************!*\
-  !*** ./src/images/icons-todolist.png ***!
-  \***************************************/
+/***/ "./src/images/header-banner/icons-todolist.png":
+/*!*****************************************************!*\
+  !*** ./src/images/header-banner/icons-todolist.png ***!
+  \*****************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"f206df1217f699b8e520.png\";\n\n//# sourceURL=webpack://to-do-list/./src/images/icons-todolist.png?");
+eval("module.exports = __webpack_require__.p + \"f206df1217f699b8e520.png\";\n\n//# sourceURL=webpack://to-do-list/./src/images/header-banner/icons-todolist.png?");
 
 /***/ }),
 
-/***/ "./src/images/john-pogi.png":
-/*!**********************************!*\
-  !*** ./src/images/john-pogi.png ***!
-  \**********************************/
+/***/ "./src/images/header-banner/john-pogi.png":
+/*!************************************************!*\
+  !*** ./src/images/header-banner/john-pogi.png ***!
+  \************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"cfcfab76231d71f45ef6.png\";\n\n//# sourceURL=webpack://to-do-list/./src/images/john-pogi.png?");
+eval("module.exports = __webpack_require__.p + \"cfcfab76231d71f45ef6.png\";\n\n//# sourceURL=webpack://to-do-list/./src/images/header-banner/john-pogi.png?");
+
+/***/ }),
+
+/***/ "./src/images/side-banner/icons-7days.png":
+/*!************************************************!*\
+  !*** ./src/images/side-banner/icons-7days.png ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"34896694468bf99e056f.png\";\n\n//# sourceURL=webpack://to-do-list/./src/images/side-banner/icons-7days.png?");
+
+/***/ }),
+
+/***/ "./src/images/side-banner/icons-add.png":
+/*!**********************************************!*\
+  !*** ./src/images/side-banner/icons-add.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ce76e3d31edd8f5b1c9a.png\";\n\n//# sourceURL=webpack://to-do-list/./src/images/side-banner/icons-add.png?");
+
+/***/ }),
+
+/***/ "./src/images/side-banner/icons-important.png":
+/*!****************************************************!*\
+  !*** ./src/images/side-banner/icons-important.png ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"616a3a8e09b7957df49f.png\";\n\n//# sourceURL=webpack://to-do-list/./src/images/side-banner/icons-important.png?");
+
+/***/ }),
+
+/***/ "./src/images/side-banner/icons-tasks.png":
+/*!************************************************!*\
+  !*** ./src/images/side-banner/icons-tasks.png ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f932485692f26ac7ca8e.png\";\n\n//# sourceURL=webpack://to-do-list/./src/images/side-banner/icons-tasks.png?");
+
+/***/ }),
+
+/***/ "./src/images/side-banner/icons-today.png":
+/*!************************************************!*\
+  !*** ./src/images/side-banner/icons-today.png ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3702e682fa66e9a600ad.png\";\n\n//# sourceURL=webpack://to-do-list/./src/images/side-banner/icons-today.png?");
 
 /***/ })
 
