@@ -6,8 +6,8 @@ body{
     background-color: rgb(20,20,20);
     color: aliceblue;
     font-family: Roboto, sans-serif;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .container{
@@ -40,10 +40,62 @@ body{
     align-items: center;
 }
 
+/*SIDE BANNER*/
 .side-banner{
     grid-area: 2 / 1 / 3 / 2;
     background-color: #0b2630;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    padding: 15px;
+    letter-spacing: 0.5px;
 }
+
+.folder-header{
+    border-bottom: solid 1px aliceblue;
+    font-weight: 700;
+    font-size: 24px;
+    padding-bottom: 3px;
+}
+
+.folder-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.folder-content > *{
+    cursor: pointer;
+}
+
+.home-item{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.home-item:hover{
+    background-color: #10323e;
+    filter: opacity(0.9);
+    border-radius: 10px;
+}
+
+.home-folder{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .body-banner{
     grid-area: 2 / 2 / 3 / 3;

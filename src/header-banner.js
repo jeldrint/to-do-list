@@ -1,6 +1,6 @@
-import Icon1 from './images/icons-todolist.png'
-import Icon2 from './images/icons-menulogo.png'
-import Icon3 from './images/john-pogi.png'
+import Icon1 from './images/header-banner/icons-todolist.png'
+import Icon2 from './images/header-banner/icons-menulogo.png'
+import Icon3 from './images/header-banner/john-pogi.png'
 
 const layout = () => {
     headerLayout();
@@ -44,7 +44,6 @@ const headerLayout = () => {
     darkMode.appendChild(profilePic);
     profilePic.style.width = '60px'
     profilePic.style.borderRadius = '30px';
-
 }
 
 const footerLayout = () => {
