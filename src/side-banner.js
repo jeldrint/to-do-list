@@ -2,8 +2,15 @@ import Icon1 from './images/side-banner/icons-tasks.png'
 import Icon2 from './images/side-banner/icons-today.png'
 import Icon3 from './images/side-banner/icons-7days.png'
 import Icon4 from './images/side-banner/icons-important.png'
-import Icon5 from './images/side-banner/icons-add.png'
+import Icon5 from './images/side-banner/icons-add-3.png'
 
+import addProject from './add-project'
+
+
+const sideBanner = () => {
+    layout();
+    addProject();
+}
 
 const layout = () => {
     const side = document.createElement('section');
@@ -87,12 +94,31 @@ const layout = () => {
     projectFolder.appendChild(projFolderHeader);
 
     const projFolderContent = document.createElement('div');
-    projFolderContent.setAttribute('class','folder-content')
+    projFolderContent.setAttribute('id','project-folder-content');
+    projFolderContent.className = 'folder-content';
     projectFolder.appendChild(projFolderContent)
 
+    const projectList = document.createElement('div');
+    projectList.setAttribute('id','project-list');
+    projectList.className = 'home-item';
+    projFolderContent.appendChild(projectList);
+
     const addProject = document.createElement('div');
+    projFolderContent.appendChild(addProject);
+    addProject.setAttribute('id','add-project');
+    addProject.className = 'home-item'
 
+    const addProjImg = new Image();
+    addProjImg.src = Icon5;
+    addProject.appendChild(addProjImg);
+    addProjImg.style.width = '30px';
+    addProjImg.style.filter = 'brightness(0) invert(1)';
+    addProjImg.style.opacity = '0.85'
+    addProjImg.style.paddingLeft = '10px'
 
+    const addProjText = document.createElement('span');
+    addProjText.innerText = "Add Project";
+    addProject.appendChild(addProjText);
 }
 
-layout();
+sideBanner();

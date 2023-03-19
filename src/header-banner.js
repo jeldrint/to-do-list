@@ -50,9 +50,19 @@ const footerLayout = () => {
     const container = document.querySelector('.container');
     const footer = document.createElement('section');
 
-    footer.innerText = 'footer';
     footer.className = 'footer'
     container.appendChild(footer);
+
+    const text2 = document.createElement('a');
+    text2.className = 'icon-link';
+    text2.innerText = 'Icons8'
+    text2.href = 'https://icons8.com/'
+    text2.target = '_blank';
+
+    const text1 = document.createElement('span');
+    text1.innerText =  '2023 \u00A9 jeldrint | `Icons by '
+    footer.appendChild(text1);
+    text1.appendChild(text2);
 }
 
 layout();
