@@ -1,6 +1,7 @@
 import Icon1 from './images/side-banner/icons-project.png';
 
 const addProject = () =>{
+    const projectList = document.querySelector('#project-list')
     const panelDiv = document.querySelector('#panel-div');
     const addProject = document.querySelector('#add-project');
     
@@ -8,16 +9,17 @@ const addProject = () =>{
     const panelCancelButton = document.createElement('button');
     const panelInputBox = document.createElement('input');
 
-    let panelDivUpper = document.createElement('div');
-
-    let panelLogo = new Image();
+    let panelDivUpper = "";
+    let panelLogo = "";
     let projectName = "";
 
 
     const addProjectPanel = () => {
+        panelDivUpper = document.createElement('div');
         panelDivUpper.className = 'panel-div-upper';
         panelDiv.appendChild(panelDivUpper);
 
+        panelLogo = new Image();
         panelLogo.src = Icon1;
         panelLogo.style.width = '50px';
         panelDivUpper.appendChild(panelLogo);
@@ -54,7 +56,7 @@ const addProject = () =>{
         const projectNameInput = panelInputBox.value;
         const projectItem = document.createElement('div');
         projectItem.className = 'home-item';
-        panelDiv.appendChild(projectItem);
+        projectList.appendChild(projectItem);
 
         panelLogo = new Image();
         panelLogo.src = Icon1;

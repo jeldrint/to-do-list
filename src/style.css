@@ -91,6 +91,11 @@ body{
     margin-top: 10px;
 }
 
+#project-list{
+    display: flex;
+    flex-direction: column;
+}
+
 #panel-div{
     display: flex;
     flex-direction: column;
