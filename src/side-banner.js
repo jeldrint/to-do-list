@@ -98,10 +98,9 @@ const layout = () => {
     projFolderContent.className = 'folder-content';
     projectFolder.appendChild(projFolderContent)
 
-    const projectList = document.createElement('div');
-    projectList.setAttribute('id','project-list');
-    projectList.className = 'home-item';
-    projFolderContent.appendChild(projectList);
+    const panelDiv = document.createElement('div');
+    panelDiv.setAttribute('id','panel-div');
+    projFolderContent.appendChild(panelDiv);
 
     const addProject = document.createElement('div');
     projFolderContent.appendChild(addProject);

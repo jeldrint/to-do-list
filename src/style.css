@@ -86,21 +86,57 @@ body{
     row-gap: 20px;
 }
 
+/*SIDE BANNER - ADD PROJECT */
 #add-project{
     margin-top: 10px;
 }
 
-.panel-div{
+#panel-div{
     display: flex;
     flex-direction: column;
+}
+
+.panel-div-upper{
+    display: flex;
     align-items: center;
     row-gap: 5px;
 }
 
-.panel-buttons{
-    
+.panel-input-box{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
 }
 
+.panel-input-box::placeholder{
+    font-family: 'Exo 2','Roboto', Arial, sans-serif;
+}
+
+#panel-add-button{
+    background-color: #39ff14;
+}
+
+#panel-add-button:hover, #panel-cancel-button:hover{
+    opacity: 0.8;
+}
+
+#panel-cancel-button{
+    background-color: #ff073a;
+}
+
+.panel-buttons{
+    align-self: center;
+    display: flex;
+    column-gap: 5px;
+}
+
+.panel-buttons > * {
+    padding: 3px 7px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Exo 2','Roboto', Arial, sans-serif;
+    cursor: pointer;
+}
 
 
 

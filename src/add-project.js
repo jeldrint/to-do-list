@@ -1,38 +1,39 @@
-import { add } from 'date-fns';
 import Icon1 from './images/side-banner/icons-project.png';
 
 const addProject = () =>{
-    const projectList = document.querySelector('#project-list');
-    const projectListContainer = document.querySelector('#project-folder-content');
+    const panelDiv = document.querySelector('#panel-div');
     const addProject = document.querySelector('#add-project');
     
+    const panelAddButton = document.createElement('button');
+    const panelCancelButton = document.createElement('button');
+    const panelInputBox = document.createElement('input');
+
+    let panelDivUpper = document.createElement('div');
+
+    let panelLogo = new Image();
+    let projectName = "";
+
+
     const addProjectPanel = () => {
-        const panelLogo = new Image();
+        panelDivUpper.className = 'panel-div-upper';
+        panelDiv.appendChild(panelDivUpper);
+
         panelLogo.src = Icon1;
-        panelLogo.style.width = '50px'
-        projectList.appendChild(panelLogo);
+        panelLogo.style.width = '50px';
+        panelDivUpper.appendChild(panelLogo);
 
-        const panelDiv = document.createElement('div');
-        projectList.appendChild(panelDiv);
-
-        const panelInputBox = document.createElement('input');
+        panelInputBox.setAttribute('class','panel-input-box');
         panelInputBox.type = 'text';
         panelInputBox.placeholder = 'Enter Project Name';
-        panelInputBox.style.padding = '5px';
-        panelDiv.className = 'panel-div'
-        panelDiv.appendChild(panelInputBox);
+        panelDivUpper.appendChild(panelInputBox);
 
 
         //BUTTONS
-        const panelAddButton = document.createElement('button');
         panelAddButton.setAttribute('id','panel-add-button');
-        panelAddButton.className = 'panel-buttons'
-
-        const panelCancelButton = document.createElement('button');
         panelCancelButton.setAttribute('id','panel-cancel-button');
-        panelAddButton.className = 'panel-buttons'
 
         const panelButtons = document.createElement('div');
+        panelButtons.setAttribute('class','panel-buttons')
 
         panelButtons.appendChild(panelAddButton);
         panelButtons.appendChild(panelCancelButton);
@@ -43,9 +44,41 @@ const addProject = () =>{
 
     }
 
+    const deleteTempPanel = () => {
+        while(panelDiv.hasChildNodes()){
+            panelDiv.removeChild(panelDiv.firstChild);
+        }
+    }
+
+    const createProject = () =>{
+        const projectNameInput = panelInputBox.value;
+        const projectItem = document.createElement('div');
+        projectItem.className = 'home-item';
+        panelDiv.appendChild(projectItem);
+
+        panelLogo = new Image();
+        panelLogo.src = Icon1;
+        panelLogo.style.width = '50px';
+        projectItem.appendChild(panelLogo);
+
+        projectName = document.createElement('span');
+        projectName.innerText = projectNameInput;
+        projectItem.appendChild(projectName);
+    }
+
     addProject.addEventListener('click', () =>{
         addProjectPanel();
     })
+
+    panelAddButton.addEventListener('click', ()=>{
+        deleteTempPanel();
+        createProject();
+    })
+
+    panelCancelButton.addEventListener('click', ()=>{
+        deleteTempPanel();
+    })
+
 }
 
 export default addProject;
