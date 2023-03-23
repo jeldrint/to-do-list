@@ -143,20 +143,26 @@ body{
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
+/*BODY*/
 .body-banner{
     grid-area: 2 / 2 / 3 / 3;
     background-color: #10323e;
 }
+
+.body-project-name{
+    font-family: 'Exo 2','Roboto', Arial, sans-serif;
+    font-size: 48px;
+    color:aliceblue;
+    background-color:#0b2630;
+    padding: 15px 10px;
+}
+
+
+.Jey-hude-1{
+    display: none;
+}
+
+
 
 .footer{
     grid-area: 3 / 1 / 4 / 3;

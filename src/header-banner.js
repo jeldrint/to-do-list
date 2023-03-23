@@ -8,11 +8,11 @@ const layout = () => {
 }
 
 const headerLayout = () => {
-    const container = document.querySelector('.container');
     const headerBanner = document.createElement('section');
     const hamburger = document.createElement('div');
     const headerTitle = document.createElement('div');
     const darkMode = document.createElement('div');
+    const container = document.querySelector('.container');
     
     headerBanner.className = 'header-banner';
     container.appendChild(headerBanner);
@@ -65,4 +65,4 @@ const footerLayout = () => {
     text1.appendChild(text2);
 }
 
-layout();
+export default layout;

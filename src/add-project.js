@@ -1,18 +1,20 @@
 import Icon1 from './images/side-banner/icons-project.png';
+import Icon2 from './images/body/icons-new-task.png'
+
 
 const addProject = () =>{
-    const projectList = document.querySelector('#project-list')
+    const projectList = document.querySelector('#project-list');
     const panelDiv = document.querySelector('#panel-div');
     const addProject = document.querySelector('#add-project');
+    const bodyBanner = document.querySelector('.body-banner');
     
     const panelAddButton = document.createElement('button');
     const panelCancelButton = document.createElement('button');
-    const panelInputBox = document.createElement('input');
+    let panelInputBox = "";
 
     let panelDivUpper = "";
     let panelLogo = "";
     let projectName = "";
-
 
     const addProjectPanel = () => {
         panelDivUpper = document.createElement('div');
@@ -24,11 +26,11 @@ const addProject = () =>{
         panelLogo.style.width = '50px';
         panelDivUpper.appendChild(panelLogo);
 
+        panelInputBox = document.createElement('input')
         panelInputBox.setAttribute('class','panel-input-box');
         panelInputBox.type = 'text';
         panelInputBox.placeholder = 'Enter Project Name';
         panelDivUpper.appendChild(panelInputBox);
-
 
         //BUTTONS
         panelAddButton.setAttribute('id','panel-add-button');
@@ -43,7 +45,6 @@ const addProject = () =>{
 
         panelAddButton.innerText = 'Add';
         panelCancelButton.innerText = 'Cancel';
-
     }
 
     const deleteTempPanel = () => {
@@ -55,7 +56,10 @@ const addProject = () =>{
     const createProject = () =>{
         const projectNameInput = panelInputBox.value;
         const projectItem = document.createElement('div');
+        const newStr = projectNameInput.replace(/\s/g,'-')
+
         projectItem.className = 'home-item';
+        projectItem.setAttribute('id',`${newStr}-${projectList.childElementCount+1}`)
         projectList.appendChild(projectItem);
 
         panelLogo = new Image();
@@ -66,6 +70,39 @@ const addProject = () =>{
         projectName = document.createElement('span');
         projectName.innerText = projectNameInput;
         projectItem.appendChild(projectName);
+
+        //CREATION OF INITIAL BODY DIV
+        const bodyDiv = document.createElement('div');
+        bodyDiv.setAttribute('class',`${newStr}-${projectList.childElementCount}`);
+        bodyBanner.appendChild(bodyDiv);
+        bodyDiv.style.display = 'flex';
+        bodyDiv.style.flexDirection = 'column';
+        bodyDiv.style.rowGap = '10px';
+
+        const bodyProjectName = document.createElement('div');
+        bodyProjectName.className = 'body-project-name';
+        bodyProjectName.innerText = projectNameInput;
+        bodyDiv.appendChild(bodyProjectName)
+
+        const bodyContent = document.createElement('div');
+        bodyContent.setAttribute('class','body-content');
+        bodyDiv.appendChild(bodyContent);
+
+        const newTask = document.createElement('div');
+        newTask.setAttribute('class','body-new-task');
+        bodyDiv.appendChild(newTask);
+
+        const newTaskLogo = new Image();
+        newTaskLogo.src = Icon2;
+        newTaskLogo.style.width = '30px';
+        newTaskLogo.style.filter = 'brightness(0) invert(1)';
+        newTask.appendChild(newTaskLogo);
+
+        const newTaskText = document.createElement('span');
+        newTaskText.innerText = 'new task';
+        newTask.appendChild(newTaskText);
+
+
     }
 
     addProject.addEventListener('click', () =>{
@@ -80,7 +117,6 @@ const addProject = () =>{
     panelCancelButton.addEventListener('click', ()=>{
         deleteTempPanel();
     })
-
 }
 
 export default addProject;

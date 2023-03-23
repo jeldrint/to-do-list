@@ -1,4 +1,8 @@
-import './style.css'
-import './header-banner.js'
-import './side-banner.js'
-import './body.js'
+import headerLayout from './header-banner.js'
+import sideLayout from './side-banner.js'
+import bodyLayout from './body-banner.js'
+import './style.css' 
+
+headerLayout();
+sideLayout();
+bodyLayout();

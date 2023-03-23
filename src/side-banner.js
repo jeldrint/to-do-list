@@ -4,10 +4,12 @@ import Icon3 from './images/side-banner/icons-7days.png'
 import Icon4 from './images/side-banner/icons-important.png'
 import Icon5 from './images/side-banner/icons-add-3.png'
 
-import addProject from './add-project'
+import addProject from './add-project.js'
 
+import {bodyLayout} from './body-banner.js'
 
 const sideBanner = () => {
+    bodyLayout();
     layout();
     addProject();
 }
@@ -124,4 +126,4 @@ const layout = () => {
     addProject.appendChild(addProjText);
 }
 
-sideBanner();
+export default sideBanner;
