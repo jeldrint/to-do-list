@@ -102,6 +102,9 @@ const addProject = () =>{
         newTaskText.innerText = 'new task';
         newTask.appendChild(newTaskText);
 
+        //HIDING THE INITIAL DISPLAY OF DIVS IN THE BODY SECTION
+        bodyDiv.style.display = 'none';
+
 
     }
 

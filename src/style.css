@@ -157,6 +157,11 @@ body{
     padding: 15px 10px;
 }
 
+.body-new-task{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
 
 .Jey-hude-1{
     display: none;

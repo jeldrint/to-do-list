@@ -12,34 +12,28 @@ const body = () => {
     const body = document.querySelector('.body-banner');
     const projectList = document.querySelector('#project-list');
 
-    const createBodyLayout = () => {
+    const selectProject = () => {
+        let divSelect = '';
 
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
         projectList.addEventListener('click',(e)=>{
-            if (e.target.tagName.toLowerCase() != 'div'){
-                console.log(e.target.parentNode.id)
-            }else{
-                console.log(e.target.id)
+            for (let i=0;i<body.childElementCount;i++){
+                body.children[i].style.display = 'none'
             }
-            console.log(projectList.childElementCount);
+
+            if (e.target.tagName.toLowerCase() != 'div'){
+                divSelect = document.querySelector(`.${e.target.parentNode.id}`);
+            }else{
+                divSelect = document.querySelector(`.${e.target.id}`);
+            }
+
+
+            divSelect.style.display = 'flex';
+            //console.log(projectList.childElementCount);
         
         })    
     }
 
-    createBodyLayout();
+    selectProject();
 }
 
 
