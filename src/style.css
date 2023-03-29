@@ -117,15 +117,15 @@ body{
     font-family: 'Exo 2','Roboto', Arial, sans-serif;
 }
 
-#panel-add-button{
+.panel-add-button{
     background-color: #39ff14;
 }
 
-#panel-add-button:hover, #panel-cancel-button:hover{
+.panel-add-button:hover, .panel-cancel-button:hover{
     opacity: 0.8;
 }
 
-#panel-cancel-button{
+.panel-cancel-button{
     background-color: #ff073a;
 }
 
@@ -147,6 +147,9 @@ body{
 .body-banner{
     grid-area: 2 / 2 / 3 / 3;
     background-color: #10323e;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .body-project-name{
@@ -161,11 +164,70 @@ body{
     display: flex;
     align-items: center;
     column-gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
 }
 
-.Jey-hude-1{
-    display: none;
+.body-new-task:hover{
+    background-color: rgba(240, 248, 255, 0.05);
 }
+
+.body-new-task:active{
+    padding: 5px;
+}
+
+.new-task-input{
+    background-color: rgba(240, 248, 255, 0.4);
+    color: aliceblue;
+    font-family: 'Exo 2', 'Roboto', sans-serif;
+    font-weight: 500;
+    width: 500px;
+    height: 0px;
+    border-radius: 10px;
+    opacity: 0;
+    align-self: center;
+}
+
+.label-input{
+    margin: 10px;
+    display: none;
+    flex-direction: column;
+}
+
+.label-input > label{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.tasks > *{
+    display: flex;
+    background-color: rgba(240, 248, 255, 0.1);
+}
+
+.task-div-2 > *{
+    display: flex;
+    flex-direction: column;
+}
+
+.task-title{
+    font-family: 'Exo 2', 'Roboto', sans-serif;
+    font-size: 27px;
+}
+
+.task-details{
+    font-family: 'Roboto', sans-serif;
+}
+
+/*TICK BOX*/
+.task-div-1 > *{
+    display: flex;
+}
+
+.task-checkbox{
+    cursor: pointer;
+}
+
 
 
 

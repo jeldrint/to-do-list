@@ -3,10 +3,12 @@ import Icon2 from './images/side-banner/icons-today.png'
 import Icon3 from './images/side-banner/icons-7days.png'
 import Icon4 from './images/side-banner/icons-important.png'
 import Icon5 from './images/side-banner/icons-add-3.png'
+import Icon6 from './images/body/icons-new-task.png'
+
 
 import addProject from './add-project.js'
 
-import {bodyLayout} from './body-banner.js'
+import {bodyLayout, newTaskInputFormat} from './body-banner.js'
 
 const sideBanner = () => {
     bodyLayout();
@@ -17,6 +19,7 @@ const sideBanner = () => {
 const layout = () => {
     const side = document.createElement('section');
     const container = document.querySelector('.container');
+    const body = document.querySelector('.body-banner');
     
     side.className = 'side-banner';
     container.appendChild(side);
@@ -124,6 +127,31 @@ const layout = () => {
     const addProjText = document.createElement('span');
     addProjText.innerText = "Add Project";
     addProject.appendChild(addProjText);
+
+    //INITAL BODY CONTENTS
+    const bodyContent = document.createElement('div');
+    bodyContent.setAttribute('class','body-content');
+    body.appendChild(bodyContent);
+
+    newTaskInputFormat();
+
+    const newTask = document.createElement('div');
+    newTask.setAttribute('class','body-new-task');
+    body.appendChild(newTask);
+
+    const newTaskLogo = new Image();
+    newTaskLogo.src = Icon6;
+    newTaskLogo.style.width = '30px';
+    newTaskLogo.style.filter = 'brightness(0) invert(1)';
+    newTask.appendChild(newTaskLogo);
+
+    const newTaskText = document.createElement('span');
+    newTaskText.innerText = 'new task';
+    newTask.appendChild(newTaskText);
+
+    newTask.style.display = 'none';
+
+
 }
 
 export default sideBanner;

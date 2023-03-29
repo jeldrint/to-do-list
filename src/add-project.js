@@ -1,5 +1,4 @@
 import Icon1 from './images/side-banner/icons-project.png';
-import Icon2 from './images/body/icons-new-task.png'
 
 
 const addProject = () =>{
@@ -7,6 +6,7 @@ const addProject = () =>{
     const panelDiv = document.querySelector('#panel-div');
     const addProject = document.querySelector('#add-project');
     const bodyBanner = document.querySelector('.body-banner');
+    const bodyContent = document.querySelector('.body-content')
     
     const panelAddButton = document.createElement('button');
     const panelCancelButton = document.createElement('button');
@@ -33,8 +33,8 @@ const addProject = () =>{
         panelDivUpper.appendChild(panelInputBox);
 
         //BUTTONS
-        panelAddButton.setAttribute('id','panel-add-button');
-        panelCancelButton.setAttribute('id','panel-cancel-button');
+        panelAddButton.setAttribute('class','panel-add-button');
+        panelCancelButton.setAttribute('class','panel-cancel-button');
 
         const panelButtons = document.createElement('div');
         panelButtons.setAttribute('class','panel-buttons')
@@ -74,7 +74,7 @@ const addProject = () =>{
         //CREATION OF INITIAL BODY DIV
         const bodyDiv = document.createElement('div');
         bodyDiv.setAttribute('class',`${newStr}-${projectList.childElementCount}`);
-        bodyBanner.appendChild(bodyDiv);
+        bodyContent.appendChild(bodyDiv);
         bodyDiv.style.display = 'flex';
         bodyDiv.style.flexDirection = 'column';
         bodyDiv.style.rowGap = '10px';
@@ -84,23 +84,9 @@ const addProject = () =>{
         bodyProjectName.innerText = projectNameInput;
         bodyDiv.appendChild(bodyProjectName)
 
-        const bodyContent = document.createElement('div');
-        bodyContent.setAttribute('class','body-content');
-        bodyDiv.appendChild(bodyContent);
-
-        const newTask = document.createElement('div');
-        newTask.setAttribute('class','body-new-task');
-        bodyDiv.appendChild(newTask);
-
-        const newTaskLogo = new Image();
-        newTaskLogo.src = Icon2;
-        newTaskLogo.style.width = '30px';
-        newTaskLogo.style.filter = 'brightness(0) invert(1)';
-        newTask.appendChild(newTaskLogo);
-
-        const newTaskText = document.createElement('span');
-        newTaskText.innerText = 'new task';
-        newTask.appendChild(newTaskText);
+        const tasks = document.createElement('div');
+        tasks.setAttribute('class','tasks');
+        bodyDiv.appendChild(tasks);
 
         //HIDING THE INITIAL DISPLAY OF DIVS IN THE BODY SECTION
         bodyDiv.style.display = 'none';
