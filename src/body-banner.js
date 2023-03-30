@@ -1,6 +1,8 @@
 import { format } from "date-fns";
 import Icon1 from './images/body/icons-unticked-box.png'
 import Icon2 from './images/body/icons-ticked-box.png'
+import Icon3 from './images/body/icons-star-notfilled.png'
+import Icon4 from './images/body/icons-star-filled.png'
 
 const bodyLayout = () => {
     const body = document.createElement('section');
@@ -144,9 +146,19 @@ const body = () => {
             task.setAttribute('id',`task-${projectName.children[1].childElementCount+1}`);
             divSelect.children[1].appendChild(task);
 
+            const taskDivLeft = document.createElement('div');
+            taskDivLeft.setAttribute('class','task-div-left');
+            task.appendChild(taskDivLeft);
+
+            const taskDivRight = document.createElement('div');
+            taskDivRight.setAttribute('class','task-div-right');
+            task.appendChild(taskDivRight);
+
+
+            //FOR CHECKBOX
             const taskDiv1 = document.createElement('div');
             taskDiv1.setAttribute('class','task-div-1');
-            task.appendChild(taskDiv1);
+            taskDivLeft.appendChild(taskDiv1);
 
             const taskCheckbox = new Image();
             taskCheckbox.src = Icon1;
@@ -165,10 +177,10 @@ const body = () => {
             taskCheckbox2.style.display = 'none'
             taskDiv1.appendChild(taskCheckbox2);
 
-
+            //FOR TASK DETAILS
             const taskDiv2 = document.createElement('div');
             taskDiv2.setAttribute('class','task-div-2')
-            task.appendChild(taskDiv2)
+            taskDivLeft.appendChild(taskDiv2);
 
             const taskTitle2 = document.createElement('span');
             taskTitle2.setAttribute('class','task-title')
@@ -180,6 +192,39 @@ const body = () => {
             taskDetails2.innerText = detailsInputBox.value;
             taskDiv2.appendChild(taskDetails2);
 
+
+            //FOR IMPORTANT - STAR and DATE
+            const date = document.createElement('span')
+            date.setAttribute('id','date')
+            if(dateInputBox.value){
+                date.innerText = `(${dateInputBox.value})`;
+            }else{
+                date.innerText = 'no date'
+            }
+            taskDivRight.appendChild(date);
+
+            const taskDiv3 = document.createElement('div');
+            taskDiv3.setAttribute('class','task-div-3')
+            taskDivRight.appendChild(taskDiv3);
+
+            const taskImportant = new Image();
+            taskImportant.src = Icon3;
+            taskImportant.setAttribute('class','task-important');
+            taskImportant.setAttribute('id','star-not-filled');            
+            taskImportant.style.width = '50px'
+            taskImportant.style.height = '50px'
+            taskDiv3.appendChild(taskImportant);
+
+            const taskImportant2 = new Image();
+            taskImportant2.src = Icon4;
+            taskImportant2.setAttribute('class','task-important');
+            taskImportant2.setAttribute('id','star-filled');            
+            taskImportant2.style.width = '50px'
+            taskImportant2.style.height = '50px'
+            taskImportant2.style.display = 'none'
+            taskDiv3.appendChild(taskImportant2);
+
+
             //ADD BUTTON OUTRO
             newTaskInput.style.height = '0px';
             newTaskInput.style.opacity = '0';
@@ -187,28 +232,39 @@ const body = () => {
             labelInput.style.display = 'none';
             titleInputBox.value = '';
             detailsInputBox.value = '';
-            dateInputBox.value = '';
-
-            //FOR THE TICK BOX
-            const tickBox = document.querySelector('.task-checkbox');
-
-            tickBox.addEventListener('click',(e)=>{
-                if(taskDiv1.children[0].id === 'unchecked-checkbox'){
-                    console.log('tick');
-                    taskCheckbox.style.display = 'none';
-                    taskCheckbox2.style.display = 'flex';
-                }else{
-                    console.log('untick');
-                    taskCheckbox2.style.display = 'none';
-                    taskCheckbox.style.display = 'flex';
-                }
-            })
-    
+            dateInputBox.value = '';    
         })
+
+    }
+
+    const tickTheLogos = () => {
+        bodyContent.addEventListener('click',(e)=>{
+            //FOR CHECKBOX
+            if(e.target.id === 'unchecked-checkbox'){
+                e.target.style.display = 'none'
+                e.target.nextSibling.style.display = 'flex';
+            }
+            if(e.target.id === 'checked-checkbox'){
+                e.target.style.display = 'none'
+                e.target.previousSibling.style.display = 'flex';
+            }
+
+            //FOR STAR
+            if(e.target.id === 'star-not-filled'){
+                e.target.style.display = 'none'
+                e.target.nextSibling.style.display = 'flex';
+            }
+            if(e.target.id === 'star-filled'){
+                e.target.style.display = 'none'
+                e.target.previousSibling.style.display = 'flex';
+            }
+
+        })    
     }
 
     selectProject();
     addTask();
+    tickTheLogos();
 }
 
 

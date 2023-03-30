@@ -1,7 +1,7 @@
 import Icon1 from './images/side-banner/icons-tasks.png'
 import Icon2 from './images/side-banner/icons-today.png'
-import Icon3 from './images/side-banner/icons-7days.png'
-import Icon4 from './images/side-banner/icons-important.png'
+import Icon3 from './images/side-banner/icons-important.png'
+import Icon4 from './images/body/icons-star-filled.png'
 import Icon5 from './images/side-banner/icons-add-3.png'
 import Icon6 from './images/body/icons-new-task.png'
 
@@ -80,7 +80,7 @@ const layout = () => {
     sevenDaysImg.style.width = '50px'
 
     const sevenDaysText = document.createElement('span');
-    sevenDaysText.innerText = 'Next 7 Days'
+    sevenDaysText.innerText = 'Ongoing'
     homeFolderSevenDays.appendChild(sevenDaysText);
 
     const importantImg = new Image();
