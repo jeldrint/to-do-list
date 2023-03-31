@@ -43,17 +43,21 @@ const layout = () => {
 
     const homeFolderAllTasks = document.createElement('div');
     const homeFolderToday = document.createElement('div');
-    const homeFolderSevenDays = document.createElement('div');
+    const homeFolderOngoing = document.createElement('div');
     const homeFolderImportant = document.createElement('div');
 
     homeFolderAllTasks.setAttribute('class','home-item')
+    homeFolderAllTasks.setAttribute('id','all-tasks')
     homeFolderToday.setAttribute('class','home-item')
-    homeFolderSevenDays.setAttribute('class','home-item')
+    homeFolderToday.setAttribute('id','today')
+    homeFolderOngoing.setAttribute('class','home-item')
+    homeFolderOngoing.setAttribute('id','ongoing')
     homeFolderImportant.setAttribute('class','home-item')
+    homeFolderImportant.setAttribute('id','important')
 
     homeFolderContent.appendChild(homeFolderAllTasks);
     homeFolderContent.appendChild(homeFolderToday);
-    homeFolderContent.appendChild(homeFolderSevenDays);
+    homeFolderContent.appendChild(homeFolderOngoing);
     homeFolderContent.appendChild(homeFolderImportant);
 
     const allTasksImg = new Image();
@@ -76,12 +80,12 @@ const layout = () => {
     
     const sevenDaysImg = new Image();
     sevenDaysImg.src = Icon3;
-    homeFolderSevenDays.appendChild(sevenDaysImg);
+    homeFolderOngoing.appendChild(sevenDaysImg);
     sevenDaysImg.style.width = '50px'
 
     const sevenDaysText = document.createElement('span');
     sevenDaysText.innerText = 'Ongoing'
-    homeFolderSevenDays.appendChild(sevenDaysText);
+    homeFolderOngoing.appendChild(sevenDaysText);
 
     const importantImg = new Image();
     importantImg.src = Icon4;

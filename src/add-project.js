@@ -88,6 +88,10 @@ const addProject = () =>{
         tasks.setAttribute('class','tasks');
         bodyDiv.appendChild(tasks);
 
+        const completedTasks = document.createElement('div');
+        completedTasks.setAttribute('class','completed-tasks');
+        bodyDiv.appendChild(completedTasks);
+
         //HIDING THE INITIAL DISPLAY OF DIVS IN THE BODY SECTION
         bodyDiv.style.display = 'none';
 

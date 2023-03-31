@@ -104,10 +104,13 @@ const body = () => {
 
     let divSelect = '';
 
+    let taskCounter = 0;
+
     const selectProject = () => {
         projectList.addEventListener('click',(e)=>{
             for (let i=0;i<bodyContent.childElementCount;i++){
                 bodyContent.children[i].style.display = 'none'
+                bodyContent.children[i].children[0].style.fontSize = '36px';
             }
             if (e.target.tagName.toLowerCase() != 'div'){
                 divSelect = document.querySelector(`.${e.target.parentNode.id}`);
@@ -135,15 +138,10 @@ const body = () => {
         })
 
         inputAddButton.addEventListener('click', () =>{
-            const projectName = document.querySelector(`.${divSelect.className}`);
-            console.log(titleInputBox.value);
-            console.log(detailsInputBox.value);
-            console.log(dateInputBox.value);
-            console.log(projectName.children[1]);
-            console.log(divSelect);
+            taskCounter++;
 
             const task = document.createElement('div');
-            task.setAttribute('id',`task-${projectName.children[1].childElementCount+1}`);
+            task.setAttribute('class',`task-${taskCounter}`);
             divSelect.children[1].appendChild(task);
 
             const taskDivLeft = document.createElement('div');
@@ -162,16 +160,14 @@ const body = () => {
 
             const taskCheckbox = new Image();
             taskCheckbox.src = Icon1;
-            taskCheckbox.setAttribute('class','task-checkbox');
-            taskCheckbox.setAttribute('id','unchecked-checkbox');            
+            taskCheckbox.setAttribute('class','unchecked-checkbox');
             taskCheckbox.style.width = '50px'
             taskCheckbox.style.height = '50px'
             taskDiv1.appendChild(taskCheckbox);
 
             const taskCheckbox2 = new Image();
             taskCheckbox2.src = Icon2;
-            taskCheckbox2.setAttribute('class','task-checkbox');
-            taskCheckbox2.setAttribute('id','checked-checkbox');            
+            taskCheckbox2.setAttribute('class','checked-checkbox');
             taskCheckbox2.style.width = '50px'
             taskCheckbox2.style.height = '50px'
             taskCheckbox2.style.display = 'none'
@@ -209,16 +205,14 @@ const body = () => {
 
             const taskImportant = new Image();
             taskImportant.src = Icon3;
-            taskImportant.setAttribute('class','task-important');
-            taskImportant.setAttribute('id','star-not-filled');            
+            taskImportant.setAttribute('class','star-not-filled');
             taskImportant.style.width = '50px'
             taskImportant.style.height = '50px'
             taskDiv3.appendChild(taskImportant);
 
             const taskImportant2 = new Image();
             taskImportant2.src = Icon4;
-            taskImportant2.setAttribute('class','task-important');
-            taskImportant2.setAttribute('id','star-filled');            
+            taskImportant2.setAttribute('class','star-filled');
             taskImportant2.style.width = '50px'
             taskImportant2.style.height = '50px'
             taskImportant2.style.display = 'none'
@@ -232,31 +226,52 @@ const body = () => {
             labelInput.style.display = 'none';
             titleInputBox.value = '';
             detailsInputBox.value = '';
-            dateInputBox.value = '';    
+            dateInputBox.value = '';   
+            
+            //CLONE TASK FOR COMPLETED FOLDER
+            let cloneTask = task.cloneNode(true);
+            cloneTask.style.display = 'none';
+
+            //hard coded the check mark so i wont repeat check mark from the start
+            cloneTask.children[0].children[0].children[0].style.display = 'none';
+            cloneTask.children[0].children[0].children[1].style.display = 'flex';
+
+            divSelect.children[2].appendChild(cloneTask);
         })
 
     }
 
     const tickTheLogos = () => {
         bodyContent.addEventListener('click',(e)=>{
+            const taskClassName = document.getElementsByClassName(e.target.parentNode.parentNode.parentNode.className)
+
+            console.log(taskClassName);
+
             //FOR CHECKBOX
-            if(e.target.id === 'unchecked-checkbox'){
-                e.target.style.display = 'none'
-                e.target.nextSibling.style.display = 'flex';
+            if(e.target.className === 'unchecked-checkbox'){
+                taskClassName[0].style.display = 'none';
+                taskClassName[1].style.display = 'flex';
+
             }
-            if(e.target.id === 'checked-checkbox'){
-                e.target.style.display = 'none'
-                e.target.previousSibling.style.display = 'flex';
+            if(e.target.className === 'checked-checkbox'){
+                taskClassName[1].style.display = 'none';
+                taskClassName[0].style.display = 'flex';
             }
 
             //FOR STAR
-            if(e.target.id === 'star-not-filled'){
-                e.target.style.display = 'none'
-                e.target.nextSibling.style.display = 'flex';
+            if(e.target.className === 'star-not-filled'){
+                taskClassName[0].children[1].children[1].children[0].style.display = 'none'
+                taskClassName[0].children[1].children[1].children[1].style.display = 'flex'
+
+                taskClassName[1].children[1].children[1].children[0].style.display = 'none'
+                taskClassName[1].children[1].children[1].children[1].style.display = 'flex'
             }
-            if(e.target.id === 'star-filled'){
-                e.target.style.display = 'none'
-                e.target.previousSibling.style.display = 'flex';
+            if(e.target.className === 'star-filled'){
+                taskClassName[0].children[1].children[1].children[1].style.display = 'none'
+                taskClassName[0].children[1].children[1].children[0].style.display = 'flex'
+
+                taskClassName[1].children[1].children[1].children[1].style.display = 'none'
+                taskClassName[1].children[1].children[1].children[0].style.display = 'flex'
             }
 
         })    
