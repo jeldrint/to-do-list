@@ -1,5 +1,4 @@
 import {initializeApp} from 'firebase/app'
-import {getFireStore} from 'firebase/firestore'
 
 const firebaseConfig = {
     apiKey: "AIzaSyDa80vyi09teJhKAU4EhMrF8MwqWQfomYU",
@@ -11,7 +10,6 @@ const firebaseConfig = {
 }
 // Initialize Firebase
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 //Export firestore database
 //It will be imported into your react app whenever it is needed
-export const db = getFireStore(app);

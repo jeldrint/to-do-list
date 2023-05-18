@@ -11,7 +11,7 @@ const headerLayout = () => {
     const headerBanner = document.createElement('section');
     const hamburger = document.createElement('div');
     const headerTitle = document.createElement('div');
-    const darkMode = document.createElement('div');
+    const signIn = document.createElement('div');
     const container = document.querySelector('.container');
     
     headerBanner.className = 'header-banner';
@@ -21,8 +21,8 @@ const headerLayout = () => {
     headerBanner.appendChild(hamburger);
     headerTitle.setAttribute('class','header-title');
     headerBanner.appendChild(headerTitle);
-    darkMode.setAttribute('class','dark-mode');
-    headerBanner.appendChild(darkMode);
+    signIn.setAttribute('class','sign-in');
+    headerBanner.appendChild(signIn);
 
     const hamburgerIcon = new Image();
     hamburgerIcon.src = Icon2;
@@ -41,9 +41,15 @@ const headerLayout = () => {
 
     const profilePic = new Image();
     profilePic.src = Icon3;
-    darkMode.appendChild(profilePic);
+    signIn.appendChild(profilePic);
     profilePic.style.width = '60px'
     profilePic.style.borderRadius = '30px';
+
+    const signInBtn = document.createElement('button');
+    signInBtn.textContent = 'Sign In'
+    signInBtn.setAttribute('class', 'sign-in-btn')
+    signIn.appendChild(signInBtn);
+
 }
 
 const footerLayout = () => {

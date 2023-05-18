@@ -31,10 +31,6 @@ body{
     padding: 5px 30px 5px 10px;
 }
 
-.header-banner > * {
-    cursor: pointer;
-}
-
 .header-title{
     display: flex;
     align-items: center;
@@ -297,4 +293,15 @@ body{
 
 .icon-link:link, .icon-link:visited{
     color: aquamarine;
+}
+
+.sign-in{
+    display: flex;
+    align-items: center;
+
+    column-gap: 5px;
+}
+
+.sign-in > * {
+    cursor: pointer;
 }
