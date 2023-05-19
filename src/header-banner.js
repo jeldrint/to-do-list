@@ -39,14 +39,14 @@ const headerLayout = () => {
     headerTitleText.innerText = "toDoList";
     headerTitle.appendChild(headerTitleText);
 
-    const profilePic = new Image();
+/*     const profilePic = new Image();
     profilePic.src = Icon3;
     signIn.appendChild(profilePic);
     profilePic.style.width = '60px'
-    profilePic.style.borderRadius = '30px';
+    profilePic.style.borderRadius = '30px'; */
 
     const signInBtn = document.createElement('button');
-    signInBtn.textContent = 'Sign In'
+    signInBtn.textContent = 'Sign In with Google'
     signInBtn.setAttribute('class', 'sign-in-btn')
     signIn.appendChild(signInBtn);
 
